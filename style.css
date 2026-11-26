@@ -1,0 +1,98 @@
+/* Dayeon Kim homepage: design. Colors live in :root below (--side is the panel color). */
+/* VOICE everyday professional: calm, precise, a little warm
+   IDEA a lab ID card clipped beside a reading column
+   PICTURE the petrol profile panel with the portrait, then each paper's teaser figure
+   COLOUR white ground, petrol #0f4c5c panel edge to edge, ink, one teal accent
+   TYPE Hanken Grotesk throughout (400/600/700)
+   LAYOUT laptop: 340px sticky panel + 780px column; phone: compact panel on top, content below */
+:root{color-scheme:light dark;
+  --bg:light-dark(#ffffff,#0d1416);--ink:light-dark(#13201f,#e3ecea);--muted:light-dark(#53625f,#9db0ac);
+  --line:light-dark(#e2e8e7,#22302f);--card:light-dark(#ffffff,#121b1c);--tint:light-dark(#e6f1f2,#15292c);
+  --accent:light-dark(#0e5d70,#72c9d8);--side:light-dark(#0f4c5c,#0b3843)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.62 "Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none;text-underline-offset:3px}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid currentColor;outline-offset:2px;border-radius:6px}
+strong{font-weight:700}
+.layout{display:grid;grid-template-columns:340px minmax(0,1fr);min-height:100vh}
+.side{background:var(--side);color:#fff}
+.side-in{position:sticky;top:0;min-height:100vh;padding:56px 34px 32px;display:flex;flex-direction:column;gap:12px}
+.avatar{width:148px;height:148px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.2);background:#dfe5e8}
+.name{font-size:36px;line-height:1.05;letter-spacing:-.02em;font-weight:700;margin:12px 0 0}
+.ko{margin:0;font-size:17px;color:rgba(255,255,255,.78)}
+.role{margin:4px 0 0;font-size:15.5px;color:rgba(255,255,255,.9);line-height:1.5}
+.lab{margin:0;font-size:15px;color:rgba(255,255,255,.78)}
+.side a{color:#fff}
+.contact{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:2px}
+.contact a{display:flex;align-items:center;gap:11px;min-height:42px;padding:6px 10px;margin-left:-10px;border-radius:10px;font-size:15.5px}
+.contact a:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.contact svg{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.toc{display:flex;flex-wrap:wrap;gap:2px 16px;margin-top:auto;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);font-size:14.5px}
+.toc a{color:rgba(255,255,255,.82);padding:6px 0}
+.main{padding:60px clamp(20px,5vw,72px) 36px;max-width:920px}
+section{padding:0 0 40px}
+h2{font-size:25px;line-height:1.15;letter-spacing:-.015em;margin:0 0 16px}
+h3{margin:0}
+p{margin:0 0 12px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:16px 0 0}
+.chips li{padding:5px 13px;border-radius:999px;background:var(--tint);color:var(--accent);font-size:14.5px;font-weight:600}
+.news{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.news li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.news time{font-weight:700;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{color:var(--muted);font-size:14px;margin:-6px 0 14px}
+.pub{display:grid;grid-template-columns:230px minmax(0,1fr);gap:22px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.pub+.pub{margin-top:14px}
+.thumb{display:block;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.badge{display:inline-block;font-size:13.5px;font-weight:700;padding:2px 11px;border-radius:999px;background:var(--tint);color:var(--accent);margin-bottom:8px}
+.pub h3{font-size:18px;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px}
+.pub h3 a{color:var(--ink)}
+.authors{font-size:15px;margin-bottom:2px}
+.authors a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line)}
+.where{font-size:15px;color:var(--muted);margin-bottom:8px}
+.tldr{font-size:15px;color:var(--muted);margin-bottom:12px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.links a{display:inline-flex;align-items:center;min-height:38px;padding:4px 15px;border:1px solid var(--line);border-radius:999px;font-size:14.5px;font-weight:600;color:var(--ink)}
+.links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sub{font-size:17px;margin:26px 0 10px}
+.sub span{font-weight:400;color:var(--muted);font-size:15px}
+.dom{margin:0;padding-left:22px}
+.dom li{padding:5px 0 7px}
+.dom .t{font-weight:600}
+.dom .m{display:block;color:var(--muted);font-size:15px}
+.tl{list-style:none;margin:0;padding:0 0 0 24px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 20px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-32px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap}
+.date{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;font-size:15px}
+.tl .d{font-weight:700}
+.tl .s{color:var(--muted);font-size:15px;margin:2px 0 0}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{padding:11px 0;border-bottom:1px solid var(--line)}
+.rows .w{font-weight:600}
+.rows .s{color:var(--muted);font-size:15px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:12px 40px}
+.two h2{font-size:21px}
+footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:14px}
+@media(max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .side-in{position:static;min-height:0;padding:30px max(5vw,16px) 22px;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;row-gap:4px;align-items:center}
+  .avatar{width:96px;height:96px;grid-row:span 4;align-self:start}
+  .name{font-size:30px;margin:0}
+  .contact,.toc{grid-column:1/-1}
+  .contact{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .contact a{margin:0;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:14.5px}
+  .toc{margin-top:12px;padding-top:10px}
+  .main{padding-top:36px}
+}
+@media(max-width:640px){
+  .pub{grid-template-columns:minmax(0,1fr);padding:14px}
+  .news li{grid-template-columns:minmax(0,1fr);gap:0}
+  .side-in{grid-template-columns:minmax(0,1fr)}
+  .avatar{grid-row:auto;width:84px;height:84px}
+}
